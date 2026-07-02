@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --neon-pink: #ff00ff;
+  --neon-cyan: #00ffff;
+  --neon-lime: #00ff00;
+  --bg-dark: #09090b;
+  --bg-panel: rgba(20, 20, 25, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: #fff;
+  overflow-x: hidden;
+  background-image: 
+    linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neon-pink);
+  border-radius: 5px;
+}
+
+/* Y2K Utilities */
+.pixel-text {
+  font-family: var(--font-pixel);
+  text-transform: uppercase;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+}
+
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.y2k-button {
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--neon-pink), #8a2be2);
+  border: 2px outset #ff66ff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-shadow: 1px 1px 0px #000;
+  box-shadow: inset 2px 2px 0px rgba(255,255,255,0.3), inset -2px -2px 0px rgba(0,0,0,0.3);
+  transition: all 0.1s ease;
+}
+
+.y2k-button:active {
+  border: 2px inset #ff66ff;
+  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.3), inset -2px -2px 0px rgba(255,255,255,0.3);
+  transform: translateY(2px);
+}
+
+.y2k-button:hover {
+  filter: brightness(1.2);
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--neon-cyan);
+  color: #000;
+  padding: 5px 0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* 3D Container specific */
+.perspective-container {
+  perspective: 1000px;
+}
