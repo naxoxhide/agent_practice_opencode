@@ -52,7 +52,10 @@ export default async function MemberPage({ params }: { params: PageParams }) {
       </Link>
 
       <header className="pixel-frame holo-fill mt-6 p-6 text-cosmo-void">
-        <h1 className="font-display text-xl sm:text-2xl">{member.stageName}</h1>
+        <span className="bg-cosmo-void px-1.5 py-0.5 font-display text-[9px] text-holo-cyan">
+          S{member.number}
+        </span>
+        <h1 className="mt-3 font-display text-xl sm:text-2xl">{member.stageName}</h1>
         {member.realName && <p className="mt-1 text-sm">{member.realName}</p>}
         <p className="mt-3 font-display text-[10px]">{member.country}</p>
       </header>

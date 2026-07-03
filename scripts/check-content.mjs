@@ -15,6 +15,7 @@ function check(condition, message) {
 // --- Integrantes ---
 const memberIds = new Set();
 const memberSlugs = new Set();
+const memberNumbers = new Set();
 for (const member of members) {
   check(!memberIds.has(member.id), `id de integrante duplicado: ${member.id}`);
   memberIds.add(member.id);
@@ -22,11 +23,18 @@ for (const member of members) {
   check(!memberSlugs.has(member.slug), `slug de integrante duplicado: ${member.slug}`);
   memberSlugs.add(member.slug);
 
+  check(!memberNumbers.has(member.number), `numero S${member.number} duplicado (${member.id})`);
+  memberNumbers.add(member.number);
+
   check(/^[a-z0-9-]+$/.test(member.slug), `slug invalido: ${member.slug}`);
   check(!Number.isNaN(Date.parse(member.debutDate)), `fecha invalida en ${member.id}`);
   check(member.subunitIds.length > 0, `${member.id} no pertenece a ninguna sub-unidad`);
 }
 check(members.length === 24, `se esperaban 24 integrantes, hay ${members.length}`);
+check(
+  [...memberNumbers].sort((a, b) => a - b).every((n, i) => n === i + 1),
+  "los numeros S1-S24 no son correlativos sin huecos"
+);
 
 // --- Sub-unidades ---
 const subunitIds = new Set(subunits.map((s) => s.id));

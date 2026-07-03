@@ -1,5 +1,8 @@
 export interface Member {
   id: string;
+  /** Orden real de reveal (2022-2024). En Cosmo/Objekt cada integrante se
+   * identifica como "S" + este numero (S1 = primera revelada). */
+  number: number;
   slug: string;
   stageName: string;
   realName?: string;
