@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-pixel);
+  --font-sans: var(--font-inter);
+
+  --color-cosmo-void: #05050f;
+  --color-cosmo-surface: #0f0f22;
+  --color-cosmo-surface-alt: #15152c;
+  --color-holo-violet: #8b5cf6;
+  --color-holo-cyan: #22d3ee;
+  --color-holo-magenta: #ec4899;
+  --color-holo-gold: #fbbf24;
+  --color-ink: #e6e6f5;
+  --color-ink-muted: #9797b8;
+}
+
+body {
+  background-color: var(--color-cosmo-void);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 0%, rgba(34, 211, 238, 0.1), transparent 40%);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* --- Marco pixel: bordes duros, sombra dura, cero radius --- */
+.pixel-frame {
+  border-radius: 0;
+  border: 3px solid var(--color-ink);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.7);
+  background-color: var(--color-cosmo-surface);
+}
+
+.pixel-frame-sm {
+  border-radius: 0;
+  border: 2px solid var(--color-ink);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* Esquina achaflanada estilo HUD retro */
+.pixel-corner {
+  clip-path: polygon(
+    0 12px, 12px 0,
+    calc(100% - 12px) 0, 100% 12px,
+    100% calc(100% - 12px), calc(100% - 12px) 100%,
+    12px 100%, 0 calc(100% - 12px)
+  );
+}
+
+/* --- Relleno holográfico --- */
+.holo-fill {
+  background: linear-gradient(
+    135deg,
+    var(--color-holo-violet),
+    var(--color-holo-cyan) 45%,
+    var(--color-holo-magenta) 90%
+  );
+}
+
+.holo-text {
+  background: linear-gradient(
+    100deg,
+    var(--color-holo-violet),
+    var(--color-holo-cyan) 50%,
+    var(--color-holo-magenta)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Glow neón: reservado para hover/focus, no para el estado en reposo */
+.glow-on-hover {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.glow-on-hover:hover,
+.glow-on-hover:focus-visible {
+  box-shadow:
+    6px 6px 0 rgba(0, 0, 0, 0.7),
+    0 0 18px rgba(139, 92, 246, 0.55),
+    0 0 32px rgba(34, 211, 238, 0.35);
+  transform: translate(-2px, -2px);
+}
+
+/* Botón con efecto "presionado" */
+.pixel-button {
+  border-radius: 0;
+  border: 2px solid var(--color-ink);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.pixel-button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* --- Reveal on scroll --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Stickers flotantes --- */
+@keyframes sticker-float {
+  0%, 100% { transform: translateY(0) rotate(var(--sticker-rot, 0deg)); }
+  50% { transform: translateY(-14px) rotate(var(--sticker-rot, 0deg)); }
+}
+.sticker-float {
+  animation: sticker-float var(--sticker-duration, 6s) ease-in-out infinite;
+  animation-delay: var(--sticker-delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticker-float {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
