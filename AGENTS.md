@@ -35,3 +35,13 @@
 ## CI
 
 Workflow (`.github/workflows/main.yml`) triggers on PRs to `main`. Currently broken (references missing `test:coverage` script).
+
+## Context Log
+
+After every task executed by an AI agent, skill, or automated process, append a concise entry to `docs/context.md` documenting:
+- **Date/time** of the task
+- **Task** — what was requested
+- **Files touched** — list of files created/modified
+- **Summary** — key decisions, shortcuts taken, deferred work, or notes relevant for future sessions
+
+This log serves as persistent context for subsequent tasks, avoiding repeat analysis and keeping the agent aware of prior changes.
