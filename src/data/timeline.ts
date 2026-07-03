@@ -32,7 +32,7 @@ export const timeline: TimelineEntry[] = [
     id: "gs25",
     date: "2022-07-12",
     title: "Colaboración con GS25",
-    body: "tripleS se asocia con la cadena de conveniencia surcoreana GS25 para vender productos exclusivos y fotocards físicas durante la segunda mitad de 2022.",
+    body: "tripleS se asocia con la cadena de conveniencia surcoreana GS25 para vender sobres de Objekts físicos durante la segunda mitad de 2022.",
   },
   {
     kind: "milestone",
