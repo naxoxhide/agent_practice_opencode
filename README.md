@@ -67,8 +67,23 @@ Para maximizar el rendimiento y mantener la simplicidad arquitectónica, este pr
 - `subunits.ts`: Conformaciones y fechas de debut oficiales.
 - `timeline.ts`: Eventos históricos y referencias a videos musicales de YouTube.
 
+## 🤖 Desarrollado con OpenCode & Agent Skills
+
+Este proyecto destaca por haber sido generado y perfeccionado utilizando el ecosistema de **OpenCode**, integrando múltiples **Agent Skills** de Inteligencia Artificial para acelerar y optimizar el desarrollo:
+
+- 🧠 **Agentes Autónomos:** Arquitectura, scaffolding y refactorización generada y validada mediante IA para asegurar la consistencia y escalabilidad.
+- 🎨 **Skill `frontend-design`:** Utilizada para definir y aplicar la directriz visual "Pixel-Holo", tipografía e interacciones sin recurrir a utilidades o plantillas genéricas.
+- 💎 **Skill `ui-ux-pro-max`:** Empleada para las directrices de interfaz de la grilla de integrantes, línea de tiempo interactiva, y asegurar consistencia visual mediante el soporte activo para reducción de movimiento (`prefers-reduced-motion`).
+- 🚀 **Skill `modern-web-guidance`:** Implementación rigurosa de mejores prácticas web actuales, incluyendo soporte para Next.js 16 (App Router) y la nueva configuración "CSS-first" de Tailwind v4.
+
+## 📝 TO-DO
+
+- [ ] Integrar una **Base de Datos** real para reemplazar el directorio de contenido estático (`src/data/`) y permitir actualizaciones dinámicas sin recompilar el proyecto.
+- [ ] Seguir perfeccionando la UI/UX de la página (soporte completo de animaciones avanzadas y mejoras móviles adicionales).
+- [ ] Documentar y afinar detalladamente el **SDD (Software Design Document)** de la IA para establecer el plano arquitectónico estándar de futuras iteraciones del proyecto.
+
 ---
 
 <div align="center">
-  <p style="color: #ff00ff;"><i>Construido cruzando la Dimensión 🪐</i></p>
+  <p style="color: #ff00ff;"><i>Construido cruzando la Dimensión con OpenCode 🪐</i></p>
 </div>
