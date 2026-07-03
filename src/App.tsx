@@ -26,7 +26,7 @@ function App() {
       </header>
 
       <main className="main-content">
-        <div className="filter-bar glass-panel">
+        <div className="filter-bar win98-panel">
           <button 
             className={`filter-btn pixel-text ${filter === 'ALL' ? 'active' : ''}`}
             onClick={() => setFilter('ALL')}

@@ -5,62 +5,62 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .y2k-window {
   width: 90%;
   max-width: 800px;
-  background: #c0c0c0; /* Classic windows 95/98 silver */
-  border: 2px solid;
-  border-color: #fff #808080 #808080 #fff;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+  background: var(--win-silver);
+  border-top: 2px solid var(--win-white);
+  border-left: 2px solid var(--win-white);
+  border-right: 2px solid var(--win-black);
+  border-bottom: 2px solid var(--win-black);
+  box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #808080, 5px 5px 15px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
+  padding: 2px;
 }
 
 .y2k-titlebar {
-  background: linear-gradient(90deg, #000080, #1084d0);
-  color: white;
-  padding: 5px 10px;
+  background: var(--win-navy);
+  color: var(--win-white);
+  padding: 2px 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
 }
 
 .y2k-close-btn {
-  background: #c0c0c0;
-  border: 2px solid;
-  border-color: #fff #808080 #808080 #fff;
+  background: var(--win-silver);
+  border-top: 2px solid var(--win-white);
+  border-left: 2px solid var(--win-white);
+  border-right: 2px solid var(--win-black);
+  border-bottom: 2px solid var(--win-black);
   font-family: var(--font-pixel);
-  font-size: 0.7rem;
-  padding: 2px 6px;
+  font-size: 8px;
+  padding: 2px 4px;
   cursor: pointer;
-  color: black;
+  color: var(--win-black);
 }
+
 .y2k-close-btn:active {
-  border-color: #808080 #fff #fff #808080;
+  border-top: 2px solid var(--win-black);
+  border-left: 2px solid var(--win-black);
+  border-right: 2px solid var(--win-white);
+  border-bottom: 2px solid var(--win-white);
+  padding: 3px 3px 1px 5px;
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  background: #000;
-  border: 3px inset #808080;
-  margin: 5px;
-  gap: 30px;
+  padding: 10px;
+  background: var(--win-silver);
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
@@ -74,18 +74,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Inner bevel for 3D area */
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid var(--win-white);
+  border-bottom: 2px solid var(--win-white);
+  background: #008080; /* Teal background for the 3D viewer */
+  padding: 20px;
 }
 
 .modal-3d-card {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   aspect-ratio: 2.5 / 3.5;
-  border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 0, 255, 0.4), inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--win-black);
   transition: transform 0.1s ease-out;
   transform-style: preserve-3d;
   position: relative;
   overflow: hidden;
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.5); /* Hard shadow */
 }
 
 .card-glare {
@@ -103,39 +110,43 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: var(--win-black);
 }
 
 .member-name {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-transform: uppercase;
+  font-family: var(--font-pixel);
 }
 
 .info-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .info-item {
   display: flex;
   flex-direction: column;
-  background: var(--bg-panel);
-  padding: 10px;
-  border-left: 4px solid var(--neon-pink);
+  background: var(--win-white);
+  padding: 8px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid var(--win-white);
+  border-bottom: 2px solid var(--win-white);
 }
 
 .info-label {
-  font-size: 0.6rem;
-  color: var(--neon-cyan);
-  margin-bottom: 5px;
+  font-size: 8px;
+  color: var(--win-gray);
+  margin-bottom: 4px;
 }
 
 .info-value {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 

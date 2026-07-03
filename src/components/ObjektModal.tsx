@@ -62,7 +62,7 @@ export const ObjektModal: React.FC<Props> = ({ objekt, onClose }) => {
           </div>
           
           <div className="modal-right">
-            <h2 className="text-glow-cyan member-name">{objekt.member}</h2>
+            <h2 className="member-name">{objekt.member}</h2>
             
             <div className="info-grid">
               <div className="info-item">
