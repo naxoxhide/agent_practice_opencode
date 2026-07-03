@@ -75,6 +75,7 @@ Este proyecto destaca por haber sido generado y perfeccionado utilizando el ecos
 - 🎨 **Skill `frontend-design`:** Utilizada para definir y aplicar la directriz visual "Pixel-Holo", tipografía e interacciones sin recurrir a utilidades o plantillas genéricas.
 - 💎 **Skill `ui-ux-pro-max`:** Empleada para las directrices de interfaz de la grilla de integrantes, línea de tiempo interactiva, y asegurar consistencia visual mediante el soporte activo para reducción de movimiento (`prefers-reduced-motion`).
 - 🚀 **Skill `modern-web-guidance`:** Implementación rigurosa de mejores prácticas web actuales, incluyendo soporte para Next.js 16 (App Router) y la nueva configuración "CSS-first" de Tailwind v4.
+- 📁 **Gestión de Contexto (`docs/`):** Aplicación de mejores prácticas de desarrollo colaborativo con IA al mantener una carpeta `docs/` con un archivo `context.md`. Este archivo actúa como una bitácora viva que registra los cambios y directrices, permitiendo a distintos agentes mantener memoria contextual continua y coherente.
 
 ## 📝 TO-DO
 
