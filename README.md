@@ -76,6 +76,7 @@ Este proyecto destaca por haber sido generado y perfeccionado utilizando el ecos
 - 💎 **Skill `ui-ux-pro-max`:** Empleada para las directrices de interfaz de la grilla de integrantes, línea de tiempo interactiva, y asegurar consistencia visual mediante el soporte activo para reducción de movimiento (`prefers-reduced-motion`).
 - 🚀 **Skill `modern-web-guidance`:** Implementación rigurosa de mejores prácticas web actuales, incluyendo soporte para Next.js 16 (App Router) y la nueva configuración "CSS-first" de Tailwind v4.
 - 📁 **Gestión de Contexto (`docs/`):** Aplicación de mejores prácticas de desarrollo colaborativo con IA al mantener una carpeta `docs/` con un archivo `context.md`. Este archivo actúa como una bitácora viva que registra los cambios y directrices, permitiendo a distintos agentes mantener memoria contextual continua y coherente.
+- 🔌 **Integración MCP (`context7`):** Uso de Model Context Protocol mediante el servidor `context7` para enriquecer la base de conocimiento de la IA, proveyendo documentación extendida y precisa en tiempo real sobre las bibliotecas y tecnologías utilizadas en el stack.
 
 ## 📝 TO-DO
 
@@ -86,5 +87,5 @@ Este proyecto destaca por haber sido generado y perfeccionado utilizando el ecos
 ---
 
 <div align="center">
-  <p style="color: #ff00ff;"><i>Construido cruzando la Dimensión con OpenCode 🪐</i></p>
+  <p style="color: #ff00ff;"><i>Creado mediante Gravity Sub-Unidad OpenCode 🪐</i></p>
 </div>
